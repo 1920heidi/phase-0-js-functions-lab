@@ -1,55 +1,74 @@
-**Lab: Functions in JavaScript**
+## Task 
+You are working as a junior developer at a company that builds tools for managing personal budgets. Your task is to create a set of basic functions to perform common calculations related to budgeting. This lab will help you practice defining and using functions in JavaScript. 
 
-**Estimate Completed Time:** 30-60 minutes
 
-**Overview:**
-You are working as a junior developer at a company that builds tools for managing personal budgets. Your task is to create a set of basic functions to perform common calculations related to budgeting. This lab will help you practice defining and using functions in JavaScript.
+## Summary of index.js
+This is app can get amount after tax, covert uppercase to lower case, find the maximum value, find a palindrome word and calculate discount price.
 
-**Tools and Resources:**
-- VSCode
-- GitHub repository https://github.com/learn-co-curriculum/phase-0-js-functions-lab.git
-- Refer to previous lessons on JavaScript functions if needed
+## Functions Implemented
 
-**Instructions:**
+### 1. `calculateTax(amount)`
+Implemented calculate tax of 10% on any amount.
+- **Parameters:** `amount` (number) - The base amount to calculate tax for
+- **Returns:** Tax value (10% of the input amount)
 
-1. **Fork and Clone the Repository:**
-   - Fork the provided GitHub repository to your own account.
-   - Clone your forked repository to your local machine.
+### 2. `convertToUpperCase(text)`
+Implemented convert uppercase letters.
+- **Parameters:** `text` (string) - The text to convert
+- **Returns:** Uppercase version of the input string
+- `convertToUpperCase("heidi")` returns `"HEIDI"`
 
-2. **Navigate to the Project Directory:**
-   - Open a terminal and navigate to the project directory where you cloned the repository.
+### 3. `findMaximum(num1, num2)`
+Implemented the find Max number and it returns the larger of two numbers.
+- **Parameters:** `num1` (number), `num2` (number) - Two numbers to compare
+- **Returns:** The larger number
+- `findMaximum(8, 27)` returns `27`
 
-3. **Create Functions:**
-   - **Function 1: `calculateTax`**
-     - Create a function named `calculateTax` that takes a single parameter, `amount`, representing a monetary value.
-     - The function should calculate a 10% tax on the amount and return the tax value.
+### 4. `isPalindrome(word)`
+Checks if a given word reads the same forwards and backwards (case-insensitive).
+- **Parameters:** `word` (string) - The word to check
+- **Returns:** `true` if palindrome, `false` otherwise
+- `isPalindrome("heidi")` returns `true`
 
-   - **Function 2: `convertToUpperCase`**
-     - Create a function named `convertToUpperCase` that takes a single parameter, `text`, which is a string.
-     - The function should convert the string to uppercase and return the result.
+### 5. `calculateDiscountedPrice(originalPrice, discountPercentage)`
+Implemented calculateDiscount which calculates the final price after applying a percentage discount.
+- **Parameters:** `originalPrice` (number), `discountPercentage` (number)
+- **Returns:** Price after discount is applied
+- `calculateDiscountedPrice(200, 20)` returns `180`
 
-   - **Function 3: `findMaximum`**
-     - Create a function named `findMaximum` that takes two parameters, `num1` and `num2`, which are numbers.
-     - The function should return the larger of the two numbers.
+## Output on Terminal
 
-   - **Function 4: `isPalindrome`**
-     - Create a function named `isPalindrome` that takes a single parameter, `word`, which is a string.
-     - The function should return `true` if the string is a palindrome (reads the same forward and backward), and `false` otherwise.
+johntemba@MacBook-Air phase-0-js-functions-lab % node index.js
 
-   - **Function 5: `calculateDiscountedPrice`**
-     - Create a function named `calculateDiscountedPrice` that takes two parameters: `originalPrice` and `discountPercentage`.
-     - The function should calculate and return the price after applying the discount. For example, if `originalPrice` is $100 and `discountPercentage` is 20, the function should return $80.
+1. calculateTax Function:
+   calculateTax(200) = 20
+   calculateTax(250) = 25
 
-4. **Test Your Functions:**
-   - Run the tests provided in the repository to ensure your functions work as expected. The tests will check the correctness of your implementations.
+2. convertToUpperCase Function:
+   convertToUpperCase("heidi") = "HEIDI"
+   convertToUpperCase("Module 1") = "MODULE 1"
 
-5. **Submit Your Work:**
-   - Once your functions are implemented and pass all tests, commit your changes and push them to your forked repository on GitHub.
+3. findMaximum Function:
+   findMaximum(69, 8) = 69
+   findMaximum(-20, 5) = 5
 
-**Submission and Grading Criteria:**
+4. isPalindrome Function:
+   isPalindrome("BMW X6") = false
+   isPalindrome("Premio") = false
 
-- **Submission Format:** Submit a link to your GitHub repository.
-- **Grading Criteria:**
-  - Correct implementation of each function (`calculateTax`, `convertToUpperCase`, `findMaximum`, `isPalindrome`, and `calculateDiscountedPrice`).
-  - Functions should handle typical input values correctly.
-  - Code should be clean and follow JavaScript conventions.
+5. calculateDiscountedPrice Function:
+   calculateDiscountedPrice(400, 20) = $320
+   calculateDiscountedPrice(70, 10) = $63
+
+```
+```
+
+## Test 
+
+Run node index.js on terminal to get output.
+Do an npm install.
+Then npm test to see if it passes all tests.
+
+## Repository
+
+Original repository: https://github.com/1920heidi/phase-0-js-functions-lab
